@@ -1,0 +1,123 @@
+:root{
+    --primary-color: black;
+    --secondary-color: white;
+    --terciary-color: yellow;
+    --extra-color: #abb0be;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: var(--primary-color); 
+    color: var(--secondary-color); 
+    min-height: 100vh;
+    display: block;
+}
+
+
+header {
+    text-align: center;
+}
+
+header img{
+    width: 250px;
+    margin-top: 30px;
+
+}
+
+main {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 70vh;
+}
+
+h1 {
+    color: var(--secondary-color); 
+    padding-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    color: var(--secondary-color); 
+    padding: 20px; 
+    width: 400px; 
+    margin: 20px; 
+}
+
+
+label {
+    display: block; 
+    margin-bottom: 5px;
+    color: var(--secondary-color); 
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    border-radius: 5px; 
+}
+
+
+button {
+    width: 100%; 
+    padding: 10px;
+    margin: 5px 0;
+    background-color: var(--terciary-color); 
+    color: var(--primary-color);
+    border: none; 
+    border-radius: 5px; 
+    font-size: 1em; 
+    font-weight: bold;
+    cursor: pointer; 
+    transition: background 0.3s; 
+}
+
+button:hover {
+    background-color: var(--extra-color); 
+}
+
+form a{
+    text-decoration: none;
+    width: 100%; 
+    padding: 6px;
+    margin: 10px 0;
+    background-color: var(--terciary-color); 
+    color: var(--primary-color);
+    border: none; 
+    border-radius: 5px; 
+    font-size: 1em; 
+    font-weight: bold;
+    cursor: pointer; 
+    transition: background 0.3s; 
+    text-align: center;
+}
+
+form a:hover{
+    background-color: var(--extra-color);
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0px;
+    background: var(--primary-color);
+    color: var(--secondary-color); 
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

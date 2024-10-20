@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Indústrias Wayne</title>
+    <style>
+        :root {
+            --primary-color: black;
+            --secondary-color: white;
+            --terciary-color: yellow;
+            --extra-color: #434446;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Helvetica, sans-serif;
+            background-color: var(--primary-color); 
+            color: var(--secondary-color); 
+            min-height: 100vh;
+            display: block;
+        }
+
+        header {
+            color: var(--secondary-color);
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        #dashboard {
+            border-radius: 10px;
+            padding: 20px;
+            height: auto; 
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+            gap: 40px; 
+            margin: 50px;
+        }
+
+
+        .card {
+            background-color: var(--terciary-color);
+            color: var(--primary-color);
+            border-radius: 5px;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .card p {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        #logoutButton {
+            margin: 10px;
+            background: var(--terciary-color);
+            border: none;
+            padding: 10px 15px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0px;
+            background: var(--primary-color);
+            color: var(--secondary-color); 
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script src="dashboard-script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Dashboard - Indústrias Wayne</h1>
+    </header>
+    <main>
+        <section id="dashboard">
+            <div class="card">
+                <h3>Equipamentos Disponíveis</h3>
+                <p id="equipamentos-disponiveis"></p>
+            </div>
+            <div class="card">
+                <h3>Veículos Disponíveis</h3>
+                <p id="veiculos-disponiveis"></p>
+            </div>
+            <div class="card">
+                <h3>Dispositivos de Segurança Disponíveis</h3>
+                <p id="dispositivos-disponiveis"></p>
+            </div>
+            <div class="card">
+                <h3>Funcionários Ativos</h3>
+                <p id="funcionarios-ativos"></p>
+            </div>
+            <div class="card">
+                <h3>Gerentes Ativos</h3>
+                <p id="gerentes-ativos"></p>
+            </div>
+            <div class="card">
+                <h3>Administradores Ativos</h3>
+                <p id="administradores-ativos"></p>
+            </div>
+        </section>
+        <button id="logoutButton">Sair</button>
+    </main>
+    <footer>
+        <p>&copy; 2024 Indústrias Wayne. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

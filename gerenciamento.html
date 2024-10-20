@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento - Indústrias Wayne</title>
+    <script src="gerenciamento-script.js" defer></script>
+
+    <style>
+        :root{
+            --primary-color: black;
+            --secondary-color: white;
+            --terciary-color: yellow;
+            --extra-color: #434446;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Helvetica, sans-serif;
+            background-color: var(--primary-color); 
+            color: var(--secondary-color); 
+            min-height: 100vh;
+            display: block;
+        }
+        
+        nav {
+            position: fixed; 
+            top: 0;
+            width: 100%;
+            background-color: var(--terciary-color);
+            z-index: 1000; 
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            margin: 0px 10px;
+        }
+
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .section {
+            height: 85vh; 
+            background-color: var(--extra-color);
+            border-radius: 5px;
+            padding: 20px;
+            overflow-y: auto; 
+            margin: 50px;
+        }
+
+        h2{
+            margin-top: 30px;
+        }
+
+        .input {
+            width: 70%;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+        }
+        .item-input{
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .add {
+            padding: 5px;
+        }
+
+        .list {
+            margin-top: 10px;
+        }
+
+        .container{
+            text-align: center;
+        }
+
+        .container button {
+            margin: 10px;
+            background: var(--terciary-color);
+            border: none;
+            padding: 10px 15px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        #logoutButton {
+            margin: 10px;
+            background: var(--terciary-color);
+            border: none;
+            padding: 10px 15px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        
+        footer {
+            text-align: center;
+            padding: 10px 0px;
+            background: var(--primary-color);
+            color: var(--secondary-color); 
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#equipamentos">Equipamentos</a></li>
+                <li><a href="#veiculos">Veículos</a></li>
+                <li><a href="#dispositivos">Dispositivos de Segurança</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <section class="section" id="equipamentos">
+                <h2>Inventário de Equipamentos</h2>
+                <input type="text" class="input" placeholder="Adicionar item...">
+                <button class="add">Adicionar</button>
+                <div class="list"></div>
+            </section>
+            <section class="section" id="veiculos">
+                <h2>Veículos</h2>
+                <input type="text" class="input" placeholder="Adicionar item...">
+                <button class="add">Adicionar</button>
+                <div class="list"></div>
+            </section>
+            <section class="section" id="dispositivos">
+                <h2>Dispositivos de Segurança</h2>
+                <input type="text" class="input" placeholder="Adicionar item...">
+                <button class="add">Adicionar</button>
+                <div class="list"></div>
+            </section>
+            <button id="logoutButton">Sair</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Indústrias Wayne. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
